@@ -14,6 +14,7 @@ body{
 	grid-template-columns: auto;	
 }
 
+
 .splash-text-hi{
 	position: absolute;
     top: 50%;
@@ -22,9 +23,37 @@ body{
 	font-size: 4vw;
 	color: #FFFFFF;
 	text-align: center;
-    transform: translateX(-50%) translateY(-250%);
+	transform: translateX(-50%) translateY(-250%);	
+	opacity: 0;
+	animation: 3s ease-in-out 1s 2 alternate fadeHi;
+
 }
 
+@keyframes fadeHi{
+	0%{
+		opacity: 0;
+	}
+
+	85%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+@keyframes fadeName{
+	0%{
+		opacity: 0;
+	}
+
+	70%{/*% =(3*2+1) / (3*3+1)*100 */
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
 .splash-text-name{
 	position: absolute;
     top: 50%;
@@ -33,8 +62,9 @@ body{
 	font-size: 4vw;
 	color: #FFFFFF;
 	text-align: center;
-	transform: translateX(-50%) translateY(-250%);
-	opacity: 0;
+	transform: translateX(-50%) translateY(-250%);	
+	animation: 10s ease-in-out fadeName; /*duration = (3*3+1)s*/
+
 }
 
 .logo{
