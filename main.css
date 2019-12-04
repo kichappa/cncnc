@@ -23,7 +23,7 @@ body{
 	font-size: 4vw;
 	color: #FFFFFF;
 	text-align: center;
-	transform: translateX(-50%) translateY(-250%);	
+	transform: translateX(-50%) translateY(-150%);	
 	opacity: 0;
 	animation: 3s ease-in-out 1s 2 alternate fadeHi;
 
@@ -62,7 +62,7 @@ body{
 	font-size: 4vw;
 	color: #FFFFFF;
 	text-align: center;
-	transform: translateX(-50%) translateY(-250%);	
+	transform: translateX(-50%) translateY(-150%);	
 	animation: 10s ease-in-out fadeName; /*duration = (3*3+1)s*/
 
 }
