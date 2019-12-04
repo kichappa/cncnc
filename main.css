@@ -14,7 +14,7 @@ body{
 	grid-template-columns: auto;	
 }
 
-.splash-text{
+.splash-text-hi{
 	position: absolute;
     top: 50%;
     left: 50%;
@@ -23,6 +23,18 @@ body{
 	color: #FFFFFF;
 	text-align: center;
     transform: translateX(-50%) translateY(-250%);
+}
+
+.splash-text-name{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+	font-family:'Montserrat-Regular';
+	font-size: 4vw;
+	color: #FFFFFF;
+	text-align: center;
+	transform: translateX(-50%) translateY(-250%);
+	opacity: 0;
 }
 
 .logo{
