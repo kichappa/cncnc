@@ -86,7 +86,7 @@ body{
 	text-align: center;
 	transform: translateX(-50%) translateY(-150%);	
 	animation: 7s ease-in-out fadeName; /*duration = (3*3+1)s*/
-
+/* blah */
 }
 
 .logo{
