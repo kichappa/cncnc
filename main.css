@@ -3,8 +3,8 @@ html{
 	width: 100%;
 }
 body, html {
-	height: calc(100%-10px);
-	width: calc(100%-10px);
+	height: calc(100%-5px);
+	width: calc(100%-5px);
 }
 
 body{
@@ -94,7 +94,7 @@ body{
 	position: absolute;
     top: 100%;
 	left: 0%;
-	transform: translateY(-100%) translateX(10px) translateY(-10px);
+	transform: translateY(-100%) translateX(10px) translateY(-6px);
 }
 
 @font-face{
