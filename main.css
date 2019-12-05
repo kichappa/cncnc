@@ -29,7 +29,7 @@ body{
     left: 50%;
 	top: 50%;
 	font-family:'Montserrat-Regular';
-	font-size: 5vw;
+	font-size: 6vw;
 	color: #FFFFFF;
 	text-align: center;
 	transform: translateX(-50%) translateY(-150%);	
@@ -68,7 +68,7 @@ body{
     top: 50%;
     left: 50%;
 	font-family:'Montserrat-Regular';
-	font-size: 5vw;
+	font-size: 6vw;
 	color: #FFFFFF;
 	text-align: center;
 	transform: translateX(-50%) translateY(-100%);	
@@ -94,9 +94,11 @@ body{
 		src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 }
 
-.st0{fill:#CDDD51;}
+.st0{fill:#3CABE2;}
 .st1{fill:#FFFFFF;}
-.st2{font-family:'Montserrat-SemiBold';}
+.st2{fill:#F4B355;}
+.st3{fill:#CDDD51;}
+/* .st2{font-family:'Montserrat-SemiBold';}
 .st3{font-size:149.0359px;}
-.st4{font-family:'Montserrat-Regular';}
+.st4{font-family:'Montserrat-Regular';} */
 
