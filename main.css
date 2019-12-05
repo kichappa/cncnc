@@ -13,6 +13,16 @@ body{
 	grid-template-columns: auto;	
 }
 
+.bg-svg{
+	height: 100%;
+	/* background: #CDDD51; */
+	mix-blend-mode: hard-light;
+	opacity: 30%;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+}
 
 .splash-text-hi{
 	position: absolute;
