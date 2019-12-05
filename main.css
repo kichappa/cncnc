@@ -63,6 +63,19 @@ body{
 		opacity: 1;
 	}
 }
+
+@keyframes fadeName1{
+	0%{
+		opacity: 0;
+	}
+
+	71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
 .splash-text-name{
 	position: absolute;
     top: 50%;
@@ -71,7 +84,7 @@ body{
 	font-size: 6vw;
 	color: #FFFFFF;
 	text-align: center;
-	transform: translateX(-50%) translateY(-100%);	
+	transform: translateX(-50%) translateY(-150%);	
 	animation: 7s ease-in-out fadeName; /*duration = (3*3+1)s*/
 
 }
