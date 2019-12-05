@@ -3,9 +3,8 @@ html{
 	width: 100%;
 }
 body, html {
-	height: 100%;
-	width: 100%;
-	overflow: hidden;
+	height: calc(100%-10px);
+	width: calc(100%-10px);
 }
 
 body{
@@ -17,10 +16,10 @@ body{
 
 .splash-text-hi{
 	position: absolute;
-    top: 50%;
     left: 50%;
+	top: 50%;
 	font-family:'Montserrat-Regular';
-	font-size: 4vw;
+	font-size: 5vw;
 	color: #FFFFFF;
 	text-align: center;
 	transform: translateX(-50%) translateY(-150%);	
@@ -59,7 +58,7 @@ body{
     top: 50%;
     left: 50%;
 	font-family:'Montserrat-Regular';
-	font-size: 4vw;
+	font-size: 5vw;
 	color: #FFFFFF;
 	text-align: center;
 	transform: translateX(-50%) translateY(-150%);	
