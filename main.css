@@ -1,92 +1,98 @@
-@media (orientation: landscape) {
-	html{
-		height: 100%;
-		width: 100%;
-	}
-	body, html {
-		height: calc(100%-5px);
-		width: calc(100%-5px);
-	}
 
-	body{
-		background: #000000;
-		display: grid;
-		grid-template-columns: auto;	
-	}
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap');
+/* @font-face{
+	font-family: 'Montserrat-SemiBold';
+		src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
+}
 
-	.bg-svg{
-		height: 90%;
-		/* background: #CDDD51; */
-		opacity: 35%;
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-4%);
-	}
+@font-face{
+	font-family: 'Montserrat-Regular';
+		src: url('fonts/Montserrat-Regular.ttf') format('truetype');
+} */
 
-	.splash-text-hi{
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		font-family:'Montserrat-Regular';
-		font-size: 6vw;
-		color: #FFFFFF;
-		text-align: center;
-		transform: translateX(-50%) translateY(-150%);	
+html{
+	height: 100%;
+	width: 100%;
+}
+body, html {
+	height: calc(100%-5px);
+	width: calc(100%-5px);
+	overflow: hidden;
+}
+
+body{
+	background: #000000;
+	display: grid;
+	grid-template-columns: auto;	
+}
+
+.bg-svg{
+	height: 90%;
+	/* background: #CDDD51; */
+	opacity: 35%;
+	position: absolute;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-4%);
+}
+
+.splash-text-hi{
+	transform: translateX(-50%) translateY(-150%);	
+	opacity: 0;
+	animation: 2s ease-in-out 1s 2 alternate fadeHi;
+
+}
+
+.splash-text-name{
+	transform: translateX(-50%) translateY(-150%);	
+	animation: 7s ease-in-out fadeName; /*duration = (3*2+1)s*/
+}
+
+@keyframes fadeHi{
+	0%{
 		opacity: 0;
-		animation: 2s ease-in-out 1s 2 alternate fadeHi;
-
 	}
 
-	@keyframes fadeHi{
-		0%{
-			opacity: 0;
-		}
+	85%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 1;
+	}
+}
 
-		85%{
-			opacity: 1;
-		}
-		100%{
-			opacity: 1;
-		}
+@keyframes fadeName{
+	0%{
+		opacity: 0;
 	}
 
-	@keyframes fadeName{
-		0%{
-			opacity: 0;
-		}
-
-		71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
-			opacity: 0;
-		}
-		100%{
-			opacity: 1;
-		}
+	71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
+		opacity: 0;
 	}
-
-	@keyframes fadeName1{
-		0%{
-			opacity: 0;
-		}
-
-		71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
-			opacity: 0;
-		}
-		100%{
-			opacity: 1;
-		}
+	100%{
+		opacity: 1;
 	}
-	.splash-text-name{
+}
+
+
+.st0{fill:#0056c4;}
+.st1{fill:#FFFFFF;}
+.st2{fill:#e86600;}
+.st3{fill:#CDDD51;}
+/* .st2{font-family:'Montserrat-SemiBold';}
+.st3{font-size:149.0359px;}
+.st4{font-family:'Montserrat-Regular';} */
+
+@media (orientation: landscape) {
+	.splash{
 		position: absolute;
-		top: 50%;
 		left: 50%;
-		font-family:'Montserrat-Regular';
+		top: 50%;
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
 		font-size: 6vw;
 		color: #FFFFFF;
 		text-align: center;
-		transform: translateX(-50%) translateY(-150%);	
-		animation: 7s ease-in-out fadeName; /*duration = (3*3+1)s*/
-	/* blah */
 	}
 
 	.logo{
@@ -96,117 +102,18 @@
 		left: 0%;
 		transform: translateY(-100%) translateX(10px) translateY(-6px);
 	}
-
-	@font-face{
-		font-family: 'Montserrat-SemiBold';
-			src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
-	}
-
-	@font-face{
-		font-family: 'Montserrat-Regular';
-			src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-	}
-
-	.st0{fill:#0056c4;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#e86600;}
-	.st3{fill:#CDDD51;}
-	/* .st2{font-family:'Montserrat-SemiBold';}
-	.st3{font-size:149.0359px;}
-	.st4{font-family:'Montserrat-Regular';} */
-
 }
 
 @media (orientation: portrait) {
-	html{
-		height: 100%;
-		width: 100%;
-	}
-	body, html {
-		height: calc(100%-5px);
-		width: calc(100%-5px);
-		overflow: hidden;
-	}
-
-	body{
-		background: #000000;
-		display: grid;
-		grid-template-columns: auto;	
-	}
-
-	.bg-svg{
-		height: 90%;
-		/* background: #CDDD51; */
-		opacity: 35%;
-		position: absolute;
-		top: 0%;
-		left: 50%;
-		transform: translateX(-50%) translateY(-4%);
-	}
-
-	.splash-text-hi{
+	.splash{
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		font-family:'Montserrat-Regular';
+		font-family: 'Montserrat', sans-serif;
+		font-weight: 400;
 		font-size: 8vw;
 		color: #FFFFFF;
 		text-align: center;
-		transform: translateX(-50%) translateY(-150%);	
-		opacity: 0;
-		animation: 2s ease-in-out 1s 2 alternate fadeHi;
-
-	}
-
-	@keyframes fadeHi{
-		0%{
-			opacity: 0;
-		}
-
-		85%{
-			opacity: 1;
-		}
-		100%{
-			opacity: 1;
-		}
-	}
-
-	@keyframes fadeName{
-		0%{
-			opacity: 0;
-		}
-
-		71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
-			opacity: 0;
-		}
-		100%{
-			opacity: 1;
-		}
-	}
-
-	@keyframes fadeName1{
-		0%{
-			opacity: 0;
-		}
-
-		71.428571428571428571428571428571%{/*% =(2*2+1) / (2*3+1)*100 */
-			opacity: 0;
-		}
-		100%{
-			opacity: 1;
-		}
-	}
-	.splash-text-name{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		font-family:'Montserrat-Regular';
-		font-size: 8vw;
-		color: #FFFFFF;
-		text-align: center;
-		transform: translateX(-50%) translateY(-150%);	
-		animation: 7s ease-in-out fadeName; /*duration = (3*3+1)s*/
-	/* blah */
 	}
 
 	.logo{
@@ -216,23 +123,4 @@
 		left: 50%;
 		transform: translateY(-100%) translateX(-50%) translateX(10px) translateY(-6px);
 	}
-
-	@font-face{
-		font-family: 'Montserrat-SemiBold';
-			src: url('fonts/Montserrat-SemiBold.ttf') format('truetype');
-	}
-
-	@font-face{
-		font-family: 'Montserrat-Regular';
-			src: url('fonts/Montserrat-Regular.ttf') format('truetype');
-	}
-
-	.st0{fill:#0056c4;}
-	.st1{fill:#FFFFFF;}
-	.st2{fill:#e86600;}
-	.st3{fill:#CDDD51;}
-	/* .st2{font-family:'Montserrat-SemiBold';}
-	.st3{font-size:149.0359px;}
-	.st4{font-family:'Montserrat-Regular';} */
-
 }
