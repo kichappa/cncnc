@@ -10,43 +10,43 @@
 		src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 } */
 
-html{
-	height: 100%;
-	width: 100%;
-}
 body, html {
-	height: calc(100%-5px);
-	width: calc(100%-5px);
-	overflow: hidden;
+	height: calc(100%-10px);
+	width: calc(100%-10px);
+	/* overflow: hidden; */
 }
 
 body{
 	background: #000000;
-	display: grid;
-	grid-template-columns: auto;	
 }
 
 .bg-svg{
 	height: 90%;
 	/* background: #CDDD51; */
 	opacity: 35%;
-	position: absolute;
+	position: fixed;
 	top: 0%;
 	left: 50%;
 	transform: translateX(-50%) translateY(-4%);
 }
 
 .splash-text-hi{
-	transform: translateX(-50%) translateY(-150%);	
+	/* transform: translateY(-100%);	 */
+	/* background: #0056c4; */
+	/* border: 5px solid #00c400; */
 	opacity: 0;
 	animation: 2s ease-in-out 1s 2 alternate fadeHi;
 
 }
 
 .splash-text-name{
-	transform: translateX(-50%) translateY(-150%);	
-	animation: 7s ease-in-out fadeName; /*duration = (3*2+1)s*/
+	/* transform: translateX(-50%) translateY(-150%); */
+	/* background: #CDDD51; */
+	/* border: 5px solid #00c400;	 */
+	animation: 7s ease-in-out fadeName; 
+	/* duration = (3*2+1)s */
 }
+
 
 @keyframes fadeHi{
 	0%{
@@ -75,6 +75,7 @@ body{
 }
 
 
+
 .st0{fill:#0056c4;}
 .st1{fill:#FFFFFF;}
 .st2{fill:#e86600;}
@@ -85,8 +86,14 @@ body{
 
 @media (orientation: landscape) {
 	.splash{
+		width: calc(100% - 25px);
+		padding: 0;
+		margin: 0;
+		/* opacity: 50%; */
+		/* background: #0056c4; */
+		transform: translateY(-50%);
 		position: absolute;
-		left: 50%;
+		/* left: 50%; */
 		top: 50%;
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
@@ -97,7 +104,7 @@ body{
 
 	.logo{
 		width:10%;
-		position: absolute;
+		position: fixed;
 		top: 100%;
 		left: 0%;
 		transform: translateY(-100%) translateX(10px) translateY(-6px);
@@ -106,8 +113,14 @@ body{
 
 @media (orientation: portrait) {
 	.splash{
+		width: calc(100% - 25px);
+		padding: 0;
+		margin: 0;
+		/* opacity: 50%; */
+		/* background: #0056c4; */
+		transform: translateY(-50%);
 		position: absolute;
-		left: 50%;
+		/* left: 50%; */
 		top: 50%;
 		font-family: 'Montserrat', sans-serif;
 		font-weight: 400;
