@@ -38,6 +38,59 @@ body {
     transform: translateX(-50%) translateY(-4%);
 }
 
+.splash-text-hi {
+    /* transform: translateY(-100%);	 */
+    /* background: #0056c4; */
+    /* border: 5px solid #00c400; */
+    opacity: 1;
+    /* animation: 2s ease-in-out 1s 2 alternate fadeHi; */
+
+}
+
+.splash-text-name {
+    /* transform: translateX(-50%) translateY(-150%); */
+    /* background: #CDDD51; */
+    /* border: 5px solid #00c400;	 */
+    opacity: 1;
+    /* animation: 7s ease-in-out fadeName; */
+    /* duration = (3*2+1)s */
+}
+
+
+@keyframes fadeHi {
+    0% {
+        opacity: 0;
+    }
+
+    85% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeName {
+    0% {
+        opacity: 0;
+    }
+
+    71.428571428571428571428571428571% {
+        /*% =(2*2+1) / (2*3+1)*100 */
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.img{
+	width: 100%;
+	height: 100%;
+}
+
 #preloader {
     position: fixed;
     top: 0;
@@ -61,7 +114,7 @@ body {
     position: fixed;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%) translateY(-30%);
+    transform: translate(-50%, -50%) translateY(-40%);
 }
 
 #preloader-text {
@@ -70,7 +123,7 @@ body {
     margin: 0;
     /* opacity: 50%; */
     /* background: #0056c4; */
-    transform: translateY(+100%);
+    transform: translateY(+50%);
     position: absolute;
     /* left: 50%; */
     top: 50%;
@@ -78,6 +131,10 @@ body {
     font-weight: 400;
     color: #FFFFFF;
     text-align: center;
+}
+
+.i-jingle {
+    animation: jingle 1s infinite linear;
 }
 
 .st0 {
@@ -101,7 +158,7 @@ body {
 .st4{font-family:'Montserrat-Regular';} */
 
 @media (orientation: landscape) {
-    .main-text{
+    .splash {
         width: calc(100% - 25px);
         padding: 0;
         margin: 0;
@@ -119,12 +176,13 @@ body {
 	}
 	
 	#preloader-image{
-		width: 13%;
-    }
-    
-    #preloader-text{
-        font-size:3vw;
-    }
+		width: 20%;
+		height: auto;
+	}
+
+	#preloader-text{
+		font-size: 6vw;
+	}
 
     .logo {
         width: 10%;
@@ -136,7 +194,7 @@ body {
 }
 
 @media (orientation: portrait) {
-    .main-text{
+    .splash {
         width: calc(100% - 25px);
         padding: 0;
         margin: 0;
@@ -155,6 +213,10 @@ body {
 	
 	#preloader-image{
 		width: 40%;
+	}
+
+	#preloader-text{
+		font-size: 8vw;
 	}
 
     .logo {
