@@ -48,7 +48,9 @@ body {
 #home-bg {
     /* width: 50%; */
     /* max-width: 200%; */
-    max-height: 80%;
+    max-height: 80vh;
+    /* min-height: 75vh; */
+    /* width: 100vw; */
     width: auto;
     height: auto;
     /* position: absolute; */
@@ -85,7 +87,7 @@ body {
     /* border: 5px solid #CDDD51; 
 } */
 
-#preloader-text p {
+#preloader-text {
     text-align: center;
 }
 
@@ -115,12 +117,10 @@ body {
     }
 }
 
-/* 
+
 #preloader-content{
-	width:100%;
-	height: 100%;
-	/* display: none; 
-} */
+    padding: 1vw 1vw 1vh 1vw;
+}
 
 #preloader-image {
     /* background-image: url("preloader.gif"); */
@@ -179,38 +179,39 @@ body {
         top: 50%;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 6vw;
+        font-size: 6vmin;
         color: #FFFFFF;
         text-align: center;
     }
 
     #preloader-image {
-        width: 40%;
+        max-width: 40%;
+        max-height: 50%;
         transform: translate(-50%, -50%) translateY(-20%);
     }
 
     #preloader-text {
-        font-size: 4vw;
-        transform: translateY(+300%);
+        font-size: 7vmin;
+        transform: translateY(+200%);
     }
 
     /* preloader-text on no load of preloader-image */
     #preloader-text-nl {
         transform: translateY(0);
-        font-size: 6vw;
-        line-height: 2vw;
+        font-size: 6vmin;
+        line-height: 2vmin;
     }
 
     #pl-not-loading {
         width: 60vw;
         left: 50%;
-        font-size: 2vw;
+        font-size: 2vmin;
         font-weight: 300;
         transform: translateX(-50%) translateY(+35%);
     }
 
     .logo {
-        width: 10%;
+        width: 10vw;
         position: fixed;
         bottom: 0;
         left: 0%;
@@ -233,13 +234,13 @@ body {
         top: 50%;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 8vw;
+        font-size: 8vmin;
         color: #FFFFFF;
         text-align: center;
     }
 
     #preloader-image {
-        width: 70%;
+        width: 70vw;
         transform: translate(-50%, -50%) translateY(-20%);
     }
 
@@ -250,20 +251,20 @@ body {
     /* preloader-text on no load of preloader-image */
     #preloader-text-nl {
         transform: translateY(0);
-        font-size: 9vw;
-        line-height: 6vw;
+        font-size: 9vmin;
+        line-height: 6vmin;
     }
 
     #pl-not-loading {
         width: 60vw;
         left: 50%;
-        font-size: 4vw;
+        font-size: 4vmin;
         font-weight: 300;
         transform: translateX(-50%) translateY(+35%);
     }
 
     .logo {
-        width: 20%;
+        width: 20vw;
         position: absolute;
         bottom: 0;
         left: 50%;
