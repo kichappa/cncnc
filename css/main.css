@@ -68,6 +68,7 @@ body {
     background-color: #000;
     position: absolute;
     top: 0;
+    filter: alpha(opacity=75);
     opacity: 75%;
     /* border: 5px solid #CDDD51; */
     z-index: 1;
