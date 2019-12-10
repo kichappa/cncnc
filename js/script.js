@@ -8,17 +8,17 @@ window.setInterval(function () {
         case 0:
             // window.alert("inside case 0");
             $("#loading-dots-1").css('opacity', '100%');
-            count+=1;
+            count += 1;
             break;
         case 1:
             // window.alert("inside case 1");
             $("#loading-dots-2").css('opacity', '100%');
-            count+=1;
+            count += 1;
             break;
         case 2:
             // window.alert("inside case 2");
             $("#loading-dots-3").css('opacity', '100%');
-            count+=1;
+            count += 1;
             break;
         case 3:
             // window.alert("inside case default");
@@ -26,7 +26,7 @@ window.setInterval(function () {
                 $("#loading-dots-1").css('opacity', '0%');
                 $("#loading-dots-2").css('opacity', '0%');
                 $("#loading-dots-3").css('opacity', '0%');
-            }            
+            }
             count = 0;
             break;
     }
