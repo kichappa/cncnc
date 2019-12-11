@@ -77,15 +77,15 @@ body {
     filter: alpha(opacity=75);
 
     /* Netscape */
-    -moz-opacity: 75%;
+    -moz-opacity: .75;
 
     /* Safari 1.x */
-    -khtml-opacity: 75%;
+    -khtml-opacity: .75;
 
     /* Good browsers */
-    opacity: 75%;
+    opacity: .75;
     /* border: 5px solid #CDDD51; */
-    z-index: 1;
+    z-index: 0;
 }
 
 #preloader {
