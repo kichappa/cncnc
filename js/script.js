@@ -1,6 +1,6 @@
 // $('.splash').hide(0);
 
-var theme = '/css/dark.css'
+var theme = '/css/light.css'
 // $('#theme-css').attr('href', '/css/' + theme + '.css');
 $('#theme-toggle-icon').click(function () {
     $('body').fadeOut(100, function () {

@@ -132,13 +132,11 @@ html {
 }
 
 #theme-toggle-icon{
-    font-size: 2.5vmin;
     color: black;
     position: absolute;
     right: 0%;
     bottom: 0%;
     /* border: 1px solid #CDDD51; */
-    margin: 0 1.5% 1.5% 0;
     z-index: 9999;
     /* overflow: hidden; */
     transition: 
@@ -344,7 +342,12 @@ html {
         left: 0%;
         /* transform: translateY(-100%); */
         /* border: 5px solid #CDDD51; */
-        margin: 0 0 0.000% 0.6%;
+        margin: 0 0 0% 0.6%;
+    }
+
+    #theme-toggle-icon {
+        font-size: 2.5vmin;
+        margin: 0 1.5% 1.5% 0;
     }
 }
 
@@ -406,7 +409,12 @@ html {
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 1.5%;
+        transform: translateX(-35%);
+        margin-bottom: 4%;
+    }
+
+    #theme-toggle-icon {
+        font-size: 5vmin;
+        margin: 0 4% 4% 0;
     }
 }
