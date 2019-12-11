@@ -85,7 +85,7 @@ body {
     /* Good browsers */
     opacity: .75;
     /* border: 5px solid #CDDD51; */
-    z-index: 0;
+    z-index: 1;
 }
 
 #preloader {
