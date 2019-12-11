@@ -65,11 +65,25 @@ body {
 #home-bg-overlay {
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: #000;
     position: absolute;
     top: 0;
     /* filter: alpha(opacity=75); */
     /* opacity: 75%; */
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=75)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=75);
+
+    /* Netscape */
+    -moz-opacity: 75%;
+
+    /* Safari 1.x */
+    -khtml-opacity: 75%;
+
+    /* Good browsers */
+    opacity: 75%;
     /* border: 5px solid #CDDD51; */
     z-index: 1;
 }
@@ -92,8 +106,38 @@ body {
     text-align: center;
 }
 
-.loading-dots {
+.loading-dots-hidden {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=0);
+
+    /* Netscape */
+    -moz-opacity: 0;
+
+    /* Safari 1.x */
+    -khtml-opacity: 0;
+
+    /* Good browsers */
     opacity: 0;
+}
+
+.loading-dots {
+    /* IE 8 */
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+
+    /* IE 5-7 */
+    filter: alpha(opacity=100);
+
+    /* Netscape */
+    -moz-opacity: 1;
+
+    /* Safari 1.x */
+    -khtml-opacity: 1;
+
+    /* Good browsers */
+    opacity: 1;
 }
 
 @keyframes dotdotdot {
@@ -119,7 +163,7 @@ body {
 }
 
 
-#preloader-content{
+#preloader-content {
     padding: 1vw 1vw 1vh 1vw;
 }
 

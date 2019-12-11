@@ -8,10 +8,10 @@ window.setInterval(function () {
     var dots = [$('#loading-dots-1'), $('#loading-dots-2'), $('#loading-dots-3')];
     if(count==3){
         for(count--;count>=0;count--){
-            $(dots[count]).css('opacity', '0%');
+            $(dots[count]).addClass('loading-dots-hidden').removeClass('loading-dots');
         }
     }else{
-        $(dots[count]).css('opacity', '100%');
+        $(dots[count]).addClass('loading-dots').removeClass('loading-dots-hidden');
         count++;
     }
 }, 300);
