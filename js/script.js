@@ -1,16 +1,22 @@
 // $('.splash').hide(0);
 
-
-// var dots = [$("#loading-dots-1"), document.getElementById("loading-dots-2"), document.getElementById("loading-dots-3")];
-
+var theme = '/css/dark.css'
+// $('#theme-css').attr('href', '/css/' + theme + '.css');
+$('#theme-toggle-icon').click(function () {
+    $('body').fadeOut(100, function () {
+        $("#stylesheet").attr("href", theme);
+        // window.alert($("#stylesheet").attr("href"));
+        (theme == '/css/dark.css') ? (theme = '/css/light.css') : (theme = '/css/dark.css');
+    }).fadeIn(100);
+});
 var count = 0;
 window.setInterval(function () {
     var dots = [$('#loading-dots-1'), $('#loading-dots-2'), $('#loading-dots-3')];
-    if(count==3){
-        for(count--;count>=0;count--){
+    if (count == 3) {
+        for (count--; count >= 0; count--) {
             $(dots[count]).addClass('loading-dots-hidden', 300).removeClass('loading-dots', 300);
         }
-    }else{
+    } else {
         $(dots[count]).addClass('loading-dots', 350).removeClass('loading-dots-hidden', 350);
         count++;
     }
@@ -30,11 +36,13 @@ $("#preloader-image").on('error', function () {
 $(window).on('load', function () {
     $('#preloader-image').delay(400).fadeOut(350);
     $('#preloader-text').delay(550).fadeOut(350);
-    $('#preloader').delay(900).fadeOut(350);
-    // $('#preloader').hide(0);
+    $('#preloader-container').delay(900).fadeOut(350);
+    // $('#preloader-container').hide(0);
     // $('#splash-text-hi').hide(0).delay(1300).fadeIn(1750).delay(500).fadeOut(1750);
     // $('#splash-text-name').hide(0).delay(1300).delay(4000).fadeIn(1750);
-    $('#splash-text').hide(0).text("Hi.").delay(1000).fadeIn(1750).delay(500).fadeOut(1750, function () {
-        $('#splash-text').hide(0).text("My name is Tandu👻!").fadeIn(1750);
+    $('#splash-text').hide(0).delay(1000).fadeIn(1750).delay(500).fadeOut(1750, function () {
+        // $('#splash-text').hide(0).text("My name is Tandu👻!").fadeIn(1750);
+        $('#splash-text').hide(0).text("Welcome to cncnc!").fadeIn(1750);
     });
+
 });

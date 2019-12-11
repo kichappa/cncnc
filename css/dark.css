@@ -21,18 +21,23 @@ body,
 html {
     height: calc(100%-10px);
     width: calc(100%-10px);
+    background-color: #000;
     /* border: 5px solid #CDDD51; */
     padding: 0;
     margin: 0;
     /* overflow: hidden; */
 }
 
-/* 
-body {
-    background: #000000;
-} */
 
-#home {
+
+/*
+====================Home====================
+============================================
+*/
+
+
+
+#home-container {
     background: #000;
     position: absolute;
     /* margin: 0; */
@@ -60,6 +65,7 @@ body {
     /* transform: translatex(-50%); */
     /* border: 5px solid #CDDD51; */
     z-index: -1;
+    overflow: hidden;
 }
 
 #home-bg-overlay {
@@ -85,10 +91,77 @@ body {
     /* Good browsers */
     opacity: .75;
     /* border: 5px solid #CDDD51; */
+    z-index: 0;
+}
+
+#splash-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /* border: 50px solid #CDDD51; */
+    align-content: center;
     z-index: 1;
 }
 
-#preloader {
+#splash-text {
+    width: 100%;
+    overflow: hidden;
+    display: block;
+}
+
+/* #logo{ */
+/* border: 5px solid #CDDD51; */
+/* } */
+
+
+
+/*
+====================Floating====================
+================================================
+*/
+
+
+
+#floating-container {
+    background: #000;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    border: 5px solid #CDDD51;
+}
+
+#theme-toggle-icon {
+    color: white;
+    position: absolute;
+    right: 0%;
+    bottom: 0%;
+    /* border: 5px solid #CDDD51; */
+    z-index: 9999;
+    transition:
+        color 0.35s;
+}
+
+#theme-toggle-icon:hover {
+    color: #CDDD51;
+}
+
+#theme-toggle-icon:focus {
+    color: #CDDD51;
+}
+
+
+
+
+/*
+====================Preloader====================
+=================================================
+*/
+
+
+
+#preloader-container {
     position: fixed;
     top: 0;
     bottom: 0;
@@ -106,6 +179,14 @@ body {
     text-align: center;
 }
 
+
+
+/*================Loading dots================*/
+
+
+
+/* state when the dots are hidden */
+/* (it's easier this way to include cross-browser capability) */
 .loading-dots-hidden {
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
@@ -123,6 +204,7 @@ body {
     opacity: 0;
 }
 
+/* state when dots are visible */
 .loading-dots {
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -139,29 +221,6 @@ body {
     /* Good browsers */
     opacity: 1;
 }
-
-@keyframes dotdotdot {
-    0% {
-        content: "";
-    }
-
-    25% {
-        content: ".";
-    }
-
-    50% {
-        content: "..";
-    }
-
-    75% {
-        content: "...";
-    }
-
-    100% {
-        counter: ""
-    }
-}
-
 
 #preloader-content {
     padding: 1vw 1vw 1vh 1vw;
@@ -191,6 +250,16 @@ body {
     text-align: center;
 }
 
+
+
+
+/*
+====================Colours====================
+===============================================
+*/
+
+
+
 .st0 {
     fill: #0056c4;
 }
@@ -211,11 +280,22 @@ body {
 .st3{font-size:149.0359px;}
 .st4{font-family:'Montserrat-Regular';} */
 
+
+
+
+/*
+====================Landscape-View====================
+======================================================
+*/
+
+
+
 @media screen and (min-aspect-ratio: 650/1000) {
     .main-text {
-        width: calc(100% - 25px);
+        width: calc(100%);
         padding: 0;
         margin: 0;
+        /* border: 5px solid #CDDD51; */
         /* opacity: 50%; */
         /* background: #0056c4; */
         transform: translateY(-50%);
@@ -224,9 +304,10 @@ body {
         top: 50%;
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 6vmin;
+        font-size: 8vmin;
         color: #FFFFFF;
-        text-align: center;
+        /* text-align: center; */
+        display: inline-block;
     }
 
     #preloader-image {
@@ -262,13 +343,29 @@ body {
         left: 0%;
         /* transform: translateY(-100%); */
         /* border: 5px solid #CDDD51; */
-        margin: 0 0 0.3% 0.5%;
+        margin: 0 0 0% 0.6%;
+    }
+
+    #theme-toggle-icon {
+        font-size: 2.5vmin;
+        margin: 0 1.5% 1.5% 0;
     }
 }
 
+
+
+
+/*
+=====================Portrain-View=====================
+=======================================================
+*/
+
+
+
+
 @media (max-aspect-ratio: 650/1000) {
     .main-text {
-        width: calc(100% - 25px);
+        /* width: calc(100% - 25px); */
         padding: 0;
         margin: 0;
         /* opacity: 50%; */
@@ -281,7 +378,7 @@ body {
         font-weight: 400;
         font-size: 8vmin;
         color: #FFFFFF;
-        text-align: center;
+        /* text-align: center; */
     }
 
     #preloader-image {
@@ -313,7 +410,13 @@ body {
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 1.5%;
+        transform: translateX(-35%);
+        margin-bottom: 4%;
     }
+
+    #theme-toggle-icon {
+        font-size: 5vmin;
+        margin: 0 4% 4% 0;
+    }
+}
 }
