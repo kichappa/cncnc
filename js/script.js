@@ -1,36 +1,20 @@
 // $('.splash').hide(0);
 
-var count = 0;
+
 // var dots = [$("#loading-dots-1"), document.getElementById("loading-dots-2"), document.getElementById("loading-dots-3")];
-// dot1=$('#loading-dots-1')
+
+var count = 0;
 window.setInterval(function () {
-    switch (count) {
-        case 0:
-            // window.alert("inside case 0");
-            $("#loading-dots-1").css('opacity', '100%');
-            count += 1;
-            break;
-        case 1:
-            // window.alert("inside case 1");
-            $("#loading-dots-2").css('opacity', '100%');
-            count += 1;
-            break;
-        case 2:
-            // window.alert("inside case 2");
-            $("#loading-dots-3").css('opacity', '100%');
-            count += 1;
-            break;
-        case 3:
-            // window.alert("inside case default");
-            for (count--; count > -1; count -= 1) {
-                $("#loading-dots-1").css('opacity', '0%');
-                $("#loading-dots-2").css('opacity', '0%');
-                $("#loading-dots-3").css('opacity', '0%');
-            }
-            count = 0;
-            break;
+    var dots = [$('#loading-dots-1'), $('#loading-dots-2'), $('#loading-dots-3')];
+    if(count==3){
+        for(count--;count>=0;count--){
+            $(dots[count]).css('opacity', '0%');
+        }
+    }else{
+        $(dots[count]).css('opacity', '100%');
+        count++;
     }
-}, 350);
+}, 300);
 
 $("#preloader-image").on('error', function () {
     $("#preloader-image").hide(0);
