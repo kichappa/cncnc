@@ -65,11 +65,11 @@ body {
 #home-bg-overlay {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.75);
     position: absolute;
     top: 0;
-    filter: alpha(opacity=75);
-    opacity: 75%;
+    /* filter: alpha(opacity=75); */
+    /* opacity: 75%; */
     /* border: 5px solid #CDDD51; */
     z-index: 1;
 }
