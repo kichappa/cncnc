@@ -40,7 +40,8 @@ var set = 0;
 var index = 0;
 var time = 0;
 var backindex = -1;
-var iSpeed=150;
+var iSpeed = 150;
+var splash_over=false;
 
 
 function typewriter() {
@@ -51,7 +52,7 @@ function typewriter() {
         if (iSpeed == 150) {
             // window.alert("Setting iSpeed=1000")
             iSpeed = 1000;
-        } else {            
+        } else {
             // window.alert("Setting iSpeed=100")
             iSpeed = 100;
             if (index > backindex) {
@@ -67,7 +68,7 @@ function typewriter() {
                     backindex++;
                 }
             } else {
-                iSpeed=500;
+                iSpeed = 500;
                 index = 0;
                 set = 1;
             }
@@ -93,11 +94,18 @@ function typewriter() {
         }
         else
             destination.innerHTML += text[set][index++] + caret;
+    } else if (set == 1 && index == text[1].length && !splash_over){
+        $('#splash-text span').animate({
+            opacity: 0
+        }, 1000)
+        if(!splash_over)
+            splash_over=true;
     }
     // if (index == text.length) {
     //     destination.innerHTML = destination.innerHTML.slice(0);
     //     index++;
     // }
+    
     setTimeout("typewriter()", iSpeed);
 }
 
@@ -115,12 +123,22 @@ $(window).on('load', function () {
     // document.getElementById('splash-text').innerHTML+=" worked!"
     // typewriter(document.getElementById("splash-text"), "Your typewriter worked!");
     // window.alert(document.getElementById("splash-text").innerHTML)
+    time = 0;
     var delayBeforeTyping = setInterval(function () {
-        if (time == 10) {
+        if (time === 35) {
+            // window.alert("time=" + time + "\nInside time==" + time);
+            document.getElementById("splash-text").innerHTML = document.getElementById("splash-text").innerHTML.slice(0, -("<span></span>".length))
             typewriter();
             clearInterval(delayBeforeTyping);
-        } else
+        } else if (time == 16) {
+            // window.alert("time=" + time + "\nInside time==" + time);
+            document.getElementById("splash-text").innerHTML += "<span></span>";
+            
             time++;
+            // clearInterval(delayBeforeTyping);
+        } else {
+            // window.alert("time=" + time + "\nInside else");
+            time++;
+        }
     }, 100);
-
 });

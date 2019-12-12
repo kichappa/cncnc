@@ -109,15 +109,15 @@ html {
     width: 100%;
     overflow: hidden;
     display: block;
-    font-family: 'Caveat', cursive;
+    font-family: 'Montserrat', serif;
     font-weight: 400;
     letter-spacing: 0.5vmin;
-    transform: rotate(-7deg) translateY(-80%);
+    transform: translateY(-80%);
 
 }
 
 #splash-text span {
-    margin: 1vmin;
+    margin: 2vmin;
     border-right: 1vmin solid var(--yellow);
     animation: caret 01s infinite;
 }
@@ -188,6 +188,7 @@ html {
     top: 0;
     background-color: var(--bg);
     z-index: 9999;
+    overflow: hidden;
 }
 
 /* #preloader-text{
@@ -333,14 +334,17 @@ html {
     #preloader-image {
         /* max-width: 80vw; */
         /* max-height: 80vh; */
-        width: 40vmin;
+        width: 40vw;
         height: auto;
-        transform: translate(-50%, -50%) translateY(-20%);
+        transform: translate(-55%, -35%) translateY(-20%);
     }
 
     #preloader-text {
-        font-size: 7vmin;
-        transform: translateY(+200%) rotate(-7deg);
+        font-size: 8vw;
+        /* border: 5px solid var(--yellow); */
+        transform: translateY(-65%) rotate(-7deg);
+        /* overflow: hidden; */
+        /* display: inline-block; */
     }
 
     /* preloader-text on no load of preloader-image */
@@ -410,11 +414,12 @@ html {
 
     #preloader-image {
         width: 70vmin;
-        transform: translate(-50%, -50%) translateY(-20%);
+        transform: translate(-55%,-35%) translateY(-20%);
     }
 
     #preloader-text {
-        transform: translateY(+225%) rotate(-7deg);
+        transform: rotate(-7deg) translateY(-40%) translateX(+5%);
+        font-size: 15vmin;
     }
 
     /* preloader-text on no load of preloader-image */
