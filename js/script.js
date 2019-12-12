@@ -4,8 +4,8 @@ var theme = '/css/light.css'
 // $('#theme-css').attr('href', '/css/' + theme + '.css');
 $('#theme-toggle-icon').click(function () {
     $('body').fadeOut(100, function () {
-        $("#stylesheet").attr("href", theme);
-        // window.alert($("#stylesheet").attr("href"));
+        $("#theme").attr("href", theme);
+        // window.alert($("#theme").attr("href"));
         (theme == '/css/dark.css') ? (theme = '/css/light.css') : (theme = '/css/dark.css');
     }).fadeIn(100);
 });
@@ -102,10 +102,10 @@ function typewriter() {
 }
 
 $(window).on('load', function () {
-    // $('#preloader-image').delay(400).fadeOut(350);
-    // $('#preloader-text').delay(550).fadeOut(350);
-    // $('#preloader-container').delay(900).fadeOut(350);
-    $('#preloader-container').hide(0);
+    $('#preloader-image').delay(400).fadeOut(350);
+    $('#preloader-text').delay(550).fadeOut(350);
+    $('#preloader-container').delay(900).fadeOut(350);
+    // $('#preloader-container').hide(0);
     // $('#splash-text-hi').hide(0).delay(1300).fadeIn(1750).delay(500).fadeOut(1750);
     // $('#splash-text-name').hide(0).delay(1300).delay(4000).fadeIn(1750);
     // $('#splash-text').hide(0).delay(1000).fadeIn(1750).delay(500).fadeOut(1750, function () {
