@@ -9,6 +9,13 @@
 		src: url('fonts/Montserrat-Regular.ttf') format('truetype');
 } */
 
+:root{
+    --bg: #000000;
+    --yellow: #CDDD51;
+    --blue: #0056c4;
+    --front:#FFFFFF;
+    }
+
 p {
     margin: 0;
 }
@@ -21,8 +28,8 @@ body,
 html {
     height: calc(100%-10px);
     width: calc(100%-10px);
-    background-color: #000;
-    /* border: 5px solid #CDDD51; */
+    background-color: var(--bg);
+    /* border: 5px solid var(--yellow); */
     padding: 0;
     margin: 0;
     /* overflow: hidden; */
@@ -38,7 +45,7 @@ html {
 
 
 #home-container {
-    background: #000;
+    background: var(--bg);
     position: absolute;
     /* margin: 0; */
     width: 100%;
@@ -46,7 +53,7 @@ html {
     padding: 0;
     margin: 0;
     z-index: -1;
-    /* border: 5px solid #CDDD51; */
+    /* border: 5px solid var(--yellow); */
 
 }
 
@@ -63,7 +70,7 @@ html {
     top: 0%;
     left: 50%;
     /* transform: translatex(-50%); */
-    /* border: 5px solid #CDDD51; */
+    /* border: 5px solid var(--yellow); */
     z-index: -1;
     overflow: hidden;
 }
@@ -71,7 +78,7 @@ html {
 #home-bg-overlay {
     width: 100%;
     height: 100%;
-    background-color: #000;
+    background-color: var(--bg);
     position: absolute;
     top: 0;
     /* filter: alpha(opacity=75); */
@@ -90,7 +97,7 @@ html {
 
     /* Good browsers */
     opacity: .75;
-    /* border: 5px solid #CDDD51; */
+    /* border: 5px solid var(--yellow); */
     z-index: 0;
 }
 
@@ -99,7 +106,7 @@ html {
     height: 100%;
     position: absolute;
     top: 0;
-    /* border: 50px solid #CDDD51; */
+    /* border: 50px solid var(--yellow); */
     align-content: center;
     z-index: 1;
 }
@@ -110,8 +117,21 @@ html {
     display: block;
 }
 
+#splash-text span {
+    margin: 1vmin;
+    border-right: 1vmin solid var(--yellow);
+    animation: caret 01s infinite;
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+        transform: scale(1.1);
+    }
+}
+
 /* #logo{ */
-/* border: 5px solid #CDDD51; */
+/* border: 5px solid var(--yellow); */
 /* } */
 
 
@@ -124,12 +144,12 @@ html {
 
 
 #floating-container {
-    background: #000;
+    background: var(--bg);
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 2;
-    border: 5px solid #CDDD51;
+    border: 5px solid var(--yellow);
 }
 
 #theme-toggle-icon {
@@ -137,18 +157,18 @@ html {
     position: absolute;
     right: 0%;
     bottom: 0%;
-    /* border: 5px solid #CDDD51; */
+    /* border: 5px solid var(--yellow); */
     z-index: 9999;
     transition:
         color 0.35s;
 }
 
 #theme-toggle-icon:hover {
-    color: #CDDD51;
+    color: var(--yellow);
 }
 
 #theme-toggle-icon:focus {
-    color: #CDDD51;
+    color: var(--yellow);
 }
 
 
@@ -167,12 +187,12 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #000000;
+    background-color: var(--bg);
     z-index: 9999;
 }
 
 /* #preloader-text{
-    /* border: 5px solid #CDDD51; 
+    /* border: 5px solid var(--yellow); 
 } */
 
 #preloader-text {
@@ -240,13 +260,13 @@ html {
     padding: 0;
     margin: 0;
     /* opacity: 50%; */
-    /* background: #0056c4; */
+    /* background: var(--blue); */
     position: absolute;
     /* left: 50%; */
     top: 50%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    color: #FFFFFF;
+    color: var(--front);
     text-align: center;
 }
 
@@ -261,11 +281,11 @@ html {
 
 
 .st0 {
-    fill: #0056c4;
+    fill: var(--blue);
 }
 
 .st1 {
-    fill: #FFFFFF;
+    fill: var(--front);
 }
 
 .st2 {
@@ -273,7 +293,7 @@ html {
 }
 
 .st3 {
-    fill: #CDDD51;
+    fill: var(--yellow);
 }
 
 /* .st2{font-family:'Montserrat-SemiBold';}
@@ -295,9 +315,9 @@ html {
         width: calc(100%);
         padding: 0;
         margin: 0;
-        /* border: 5px solid #CDDD51; */
+        /* border: 5px solid var(--yellow); */
         /* opacity: 50%; */
-        /* background: #0056c4; */
+        /* background: var(--blue); */
         transform: translateY(-50%);
         position: absolute;
         /* left: 50%; */
@@ -305,7 +325,7 @@ html {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 8vmin;
-        color: #FFFFFF;
+        color: var(--front);
         /* text-align: center; */
         display: inline-block;
     }
@@ -342,7 +362,7 @@ html {
         bottom: 0;
         left: 0%;
         /* transform: translateY(-100%); */
-        /* border: 5px solid #CDDD51; */
+        /* border: 5px solid var(--yellow); */
         margin: 0 0 0% 0.6%;
     }
 
@@ -369,7 +389,7 @@ html {
         padding: 0;
         margin: 0;
         /* opacity: 50%; */
-        /* background: #0056c4; */
+        /* background: var(--blue); */
         transform: translateY(-50%);
         position: absolute;
         /* left: 50%; */
@@ -377,7 +397,7 @@ html {
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
         font-size: 8vmin;
-        color: #FFFFFF;
+        color: var(--front);
         /* text-align: center; */
     }
 
